@@ -1,7 +1,6 @@
 #pragma once
 #include <array>
 #include <cstddef>
-using namespace std;
 
 struct BlockFeatures {
     float recency;
@@ -16,7 +15,7 @@ class Perceptron {
         void train_step(const BlockFeatures& features, float label);
 
     private:
-        array<float, 3> weights;
+        std::array<float, 3> weights;
         float bias;
         float learning_rate; 
 };

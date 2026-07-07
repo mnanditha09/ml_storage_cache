@@ -12,5 +12,5 @@ else()
 endif()
 
 file(GLOB_RECURSE SOURCES "src/*.cpp" "src/*.hpp")
-add_executable(ml_cache_sim main.cpp ${SOURCES})
-target_include_directories(ml_cache_sim PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src)
+add_executable(ml_cache_sim ${SOURCES})
+target_include_directories(ml_cache_sim PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include ${CMAKE_CURRENT_SOURCE_DIR}/src)
