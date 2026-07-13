@@ -11,9 +11,7 @@ class Tensor {
 
         Tensor(size_t r, size_t c) : rows(r), cols(c), data(r*c,0.0f) {}
         Tensor(size_t r, size_t c, std::initializer_list<float> list) : rows(r), cols(c), data(list) {
-            if (list.size() != r * c) {
-                throw std::runtime_error("Initializer list size does not match Tensor dimensions.");
-            }
+            if (list.size() != r * c) throw std::runtime_error("Matrix Dimension Mismatch.");
         }
         inline float& operator()(size_t r, size_t c) {
             return data[r*cols + c];
@@ -22,10 +20,9 @@ class Tensor {
             return data[r*cols + c]; 
         }
         void print() const {
-            for(size_t i=0; i<rows; ++i){
-                for(size_t j=0; j<cols; ++j){
-                    std::cout << (*this)(i,j) << " ";
-                }
+            for (size_t i = 0; i < rows; ++i) {
+                for (size_t j = 0; j < cols; ++j) 
+                    std::cout << data[i * cols + j] << " ";
                 std::cout << "\n";
             }
         }
