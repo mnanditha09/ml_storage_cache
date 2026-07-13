@@ -1,3 +1,0 @@
-C:/C++_Projects/ml_storage_cache/CMakeFiles/ml_cache_sim.dir
-C:/C++_Projects/ml_storage_cache/CMakeFiles/edit_cache.dir
-C:/C++_Projects/ml_storage_cache/CMakeFiles/rebuild_cache.dir
